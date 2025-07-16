@@ -17,5 +17,14 @@ module.exports = {
       }
     },
   },
+  // 浏览器兼容性
+  corePlugins: {
+    // 保留所有核心功能
+  },
+  // 禁用不支持的特性
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   plugins: [],
 }

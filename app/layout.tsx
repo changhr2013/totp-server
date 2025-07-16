@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'TOTP Demo - Two-Factor Authentication',
   description: 'A demonstration of TOTP-based two-factor authentication system',
+  other: {
+    'color-scheme': 'light',
+    'supported-color-schemes': 'light',
+  },
 }
 
 export default function RootLayout({

@@ -35,6 +35,45 @@ export default function HomePage() {
         </p>
       </div>
 
+      <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="card">
+          <div className="text-center">
+            <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Key className="w-6 h-6 text-primary-600" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">TOTP算法</h3>
+            <p className="text-gray-600 text-sm">
+              基于RFC 6238标准，使用HMAC-SHA-1算法，每30秒生成新的6位验证码
+            </p>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="text-center">
+            <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Users className="w-6 h-6 text-primary-600" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">本地存储</h3>
+            <p className="text-gray-600 text-sm">
+              使用浏览器localStorage存储用户数据，无需后端服务器，纯前端演示
+            </p>
+            <p className="text-sm text-gray-500 mt-2">当前用户数：{userCount}</p>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="text-center">
+            <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <UserPlus className="w-6 h-6 text-primary-600" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">完整流程</h3>
+            <p className="text-gray-600 text-sm">
+              支持用户注册、TOTP密钥生成、二维码展示、登录验证等完整认证流程
+            </p>
+          </div>
+        </div>
+      </div>
+
       {currentUser ? (
         <div className="max-w-md mx-auto mb-8">
           <div className="card text-center">
@@ -79,45 +118,6 @@ export default function HomePage() {
           </div>
         </div>
       )}
-
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
-        <div className="card">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <Key className="w-6 h-6 text-primary-600" />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">TOTP算法</h3>
-            <p className="text-gray-600 text-sm">
-              基于RFC 6238标准，使用HMAC-SHA-1算法，每30秒生成新的6位验证码
-            </p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <Users className="w-6 h-6 text-primary-600" />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">本地存储</h3>
-            <p className="text-gray-600 text-sm">
-              使用浏览器localStorage存储用户数据，无需后端服务器，纯前端演示
-            </p>
-            <p className="text-sm text-gray-500 mt-2">当前用户数：{userCount}</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <UserPlus className="w-6 h-6 text-primary-600" />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">完整流程</h3>
-            <p className="text-gray-600 text-sm">
-              支持用户注册、TOTP密钥生成、二维码展示、登录验证等完整认证流程
-            </p>
-          </div>
-        </div>
-      </div>
 
       <div className="text-center">
         <div className="card max-w-2xl mx-auto">
