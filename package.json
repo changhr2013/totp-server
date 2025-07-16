@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:zip": "npm run build && npm run zip",
+    "zip": "cd out && tar -czf ../totp-demo-cloudflare.tar.gz . && cd .. && echo '✅ 打包完成：totp-demo-cloudflare.tar.gz'",
+    "build:deploy": "npm run build && npm run zip"
   },
   "dependencies": {
     "next": "14.0.0",
@@ -29,6 +32,7 @@
     "eslint-config-next": "14.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "zip-cli": "^1.0.1"
   }
 }

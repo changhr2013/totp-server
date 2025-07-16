@@ -36,12 +36,31 @@ npm run dev
 
 访问 http://localhost:3000 查看应用
 
-### 构建生产版本
+### 构建Cloudflare Pages部署包
 
 ```bash
-npm run build
-npm start
+npm install
+npm run build:deploy
 ```
+
+这会生成 `totp-demo-cloudflare.tar.gz` (~470KB)，可直接上传到 Cloudflare Pages。
+
+### 部署到Cloudflare Pages
+1. **一键打包**: `npm run build:deploy`
+2. **上传文件**: 将生成的压缩包上传到 Cloudflare Pages
+3. **完成部署**: 无需额外配置，直接可用
+
+## 部署方式
+
+### Cloudflare Pages（推荐）
+- **文件大小**: ~470KB 压缩包
+- **部署时间**: < 1分钟
+- **支持**: 全球CDN、自动HTTPS
+
+### 其他平台
+- **Vercel**: 直接连接GitHub仓库
+- **Netlify**: 拖放上传或使用Git集成
+- **GitHub Pages**: 使用GitHub Actions自动部署
 
 ## 使用说明
 
